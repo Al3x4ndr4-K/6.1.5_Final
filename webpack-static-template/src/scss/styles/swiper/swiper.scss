@@ -1,0 +1,24 @@
+.swiper-pagination-bullet {
+  background-color: var(--color-bullet);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-placeholder);
+}
+
+.page-content {
+  overflow-y: auto;
+  overflow-x: hidden !important;
+}
+
+.devices-swiper {
+  overflow: hidden;
+}
+
+.brands-services {
+  overflow: hidden;
+}
+
+.swiper-pagination {
+  margin-bottom: 5px;
+}

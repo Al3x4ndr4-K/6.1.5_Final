@@ -1,0 +1,59 @@
+:root {
+  --color-light-gray: #f8f8f8;
+  --color-turquoise: #41f6d7;
+  --color-dark-gray: #80949f;
+  --color-light-turquoise: #b8ffec;
+  --color-light-black: #1b1c21;
+  --color-light-red: #ff3e79;
+  --color-gray: #eaeaea;
+  --color--item-text: #7e7e82;
+  --color-pure-white: #ffffff;
+  --color-service-line: #d9fff5;
+  --color-placeholder: #b5b6bc;
+  --color-bullet: #979797;
+
+  --border-radius: 20px;
+
+  --font-family-base: 'TTLakes', sans-serif;
+
+  --input-height: 40px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  color: var(--color-light-black);
+  background-color: var(--color-light-gray);
+  font-size: 14px;
+  line-height: 129%;
+  min-height: 100%;
+  width: 100%;
+}
+
+
+@font-face {
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,28 @@
+.footer__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-top: 2px solid var(--color-service-line);
+  font-weight: 500;
+  color: var(--color--item-text);
+  line-height: 16px;
+  opacity: 0.6;
+}
+
+.footer-public-offer {
+  max-width: 344px;
+  text-align: right;
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+
+  .footer-public-offer {
+    text-align: center;
+  }
+}

@@ -1,0 +1,252 @@
+.services-prices {
+  &__prices-info {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    padding: 0 20px;
+    gap: 1rem;
+    margin: 30px 0;
+    margin-top: 0;
+  }
+
+  &__prices-info-line {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    border: none;
+    background: none;
+    font-family: var(--font-family-base);
+    text-decoration: none;
+    text-align: left;
+    color: var(--color-light-black);
+    padding: 0;
+    cursor: pointer;
+    max-width: fit-content;
+
+    img {
+      vertical-align: text-bottom;
+    }
+
+    &:hover {
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+  }
+
+  &__slide {
+    display: flex;
+    flex-shrink: 0;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: fit-content;
+    height: 64px;
+    background: var(--color-pure-white);
+    padding: 15px 13px;
+    border: 2px solid var(--color-gray);
+    border-radius: 7px;
+    transition: opacity 0.3s, height 0.3s;
+    position: relative;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  &__order-button-container {
+    display: flex;
+    justify-content: flex-end;
+    width: 15%;
+  }
+
+  &__order-button {
+    display: flex;
+    border: 1px solid var(--color-light-red);
+    background-color: var(--color-light-red);
+    border-radius: 16px;
+    width: 120px;
+    height: 32px;
+    align-items: center;
+    justify-content: space-evenly;
+    color: var(--color-pure-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: -0.15px;
+    line-height: 24px;
+    font-size: 12px;
+    font-family: var(--font-family-base);
+    cursor: pointer;
+  }
+
+  &__table-header {
+    display: none;
+  }
+}
+
+.services-prices__price-text,
+.services-prices__repairs-headline,
+.services-prices__time-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .services-prices {
+    &_flex {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__table-header {
+      display: flex;
+      margin-right: 25px;
+      padding: 15px 13px;
+      margin-left: 23px;
+      justify-content: flex-start;
+      color: var(--color--item-text);
+      opacity: 0.72;
+    }
+
+    &__table-header > div:not(:first-child) {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__table-header > div > p {
+      display: inline;
+    }
+
+    &__repairs-headline-container {
+      min-width: 50%;
+    }
+
+    &__price-text-container {
+      min-width: 10%;
+    }
+
+    &__time-text-container {
+      min-width: 25%;
+    }
+
+    &__slide:not(:last-child) {
+      border-bottom: 2px solid var(--color-gray);
+    }
+
+    &__slide:first-child {
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+
+    &__slide:last-child {
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+
+    &__slide {
+      justify-content: flex-start;
+      width: 100%;
+      border: none;
+      border-radius: 0;
+      align-items: center;
+    }
+
+    &__repairs {
+      min-width: 50%;
+    }
+
+    &__price {
+      text-align: center;
+      min-width: 10%;
+    }
+
+    &__time {
+      text-align: center;
+      min-width: 25%;
+    }
+
+    &__container {
+      margin: 23px;
+      margin-top: 0;
+      margin-right: 25px;
+    }
+
+    &__headline {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .services-prices__price-text,
+  .services-prices__repairs-headline,
+  .services-prices__time-text {
+    display: flex;
+    color: var(--color--item-text);
+    font-weight: 500;
+    opacity: 0.6;
+  }
+
+  .services-prices__repairs,
+  .services-prices__price,
+  .services-prices__time {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .services-prices {
+    &__slide {
+      display: flex;
+      flex-shrink: 0;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: flex-start;
+      width: 260px;
+      height: 200px;
+      background: var(--color-pure-white);
+      padding: 15px 13px;
+      border: 2px solid var(--color-gray);
+      border-radius: 7px;
+      transition: opacity 0.3s, height 0.3s;
+      position: relative;
+    }
+
+    &__order-button-container {
+      position: absolute;
+      bottom: 20px;
+      right: 15px;
+    }
+
+    &__container {
+      margin: 0 16px;
+      margin-top: 16px;
+    }
+
+    &__wrapper {
+      display: flex;
+      gap: 1rem;
+    }
+
+    &__headline {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 120%;
+        height: 470%;
+        right: 0;
+        width: 100px;
+        background: linear-gradient(to right, rgba(248, 248, 248, 0), #f8f8f8);
+        pointer-events: none;
+        z-index: 2;
+      }
+    }
+
+    .services-prices-swiper {
+      overflow: hidden;
+    }
+  }
+}
