@@ -144,17 +144,17 @@
   color: var(--color--item-text);
 }
 
-@media (min-width: 1120px) {
+@media (min-width: 1366px) {
   body {
     position: relative;
   }
 
   .burger {
-    position: absolute;
+    position: sticky;
     top: 0;
-    left: -320px;
+    left: auto;
     height: 100vh;
-    width: 320px;
+    width: 300px;
     box-shadow: none;
     background-color: var(--color-pure-white);
     pointer-events: auto;
@@ -172,7 +172,7 @@
   }
 }
 
-@media (min-width: 320px) and (max-width: 1120px) {
+@media (min-width: 320px) and (max-width: 1366px) {
   .burger {
     display: none;
 
